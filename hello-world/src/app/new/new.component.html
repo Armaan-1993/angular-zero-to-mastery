@@ -1,0 +1,10 @@
+<div class="container" *ngIf="isVisible">
+  <ul *ngFor="let dets of details">
+    <li>{{ dets.name }}</li>
+    <li>{{ dets.age }}</li>
+    <li>{{ dets.sex }}</li>
+  </ul>
+</div>
+
+<button (click)="clickToDisplay()">Click Me</button>
+<button (click)="clickToHide()">Hide me</button>
