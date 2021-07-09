@@ -5,11 +5,11 @@
   <div class="secondary-container">
     <div>
       <label>Enter your name</label>
-      <input type="text" [(ngModel)]="name" />
+      <input type="text" #name />
     </div>
     <div>
       <label for="age">Enter your age</label>
-      <input type="number" [(ngModel)]="age" />
+      <input type="number" #age />
     </div>
   </div>
 
@@ -17,12 +17,12 @@
   <div class="data-table">
     <div>
       <label for="">Name:</label>
-      <h2>{{ name }}</h2>
+      <h4>{{ name.value }}</h4>
     </div>
     <div>
       <label for="">Age:</label>
-      <h2>{{ age }}</h2>
+      <h4>{{ age.value }}</h4>
     </div>
   </div>
-  <button (keyup.enter)="addData($event)">Add Data</button>
+  <button (click)="addData(name.value, age.value)">Add Data</button>
 </div>

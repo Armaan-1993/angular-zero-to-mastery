@@ -2,6 +2,7 @@
   background-color: rgb(105, 198, 221);
   padding: 2em;
   border-radius: 1em;
+  margin-top: 3em;
 }
 
 input {
@@ -79,6 +80,7 @@ table {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   margin-left: 1em;
+  min-width: 200px;
 }
 
 button {
@@ -132,6 +134,12 @@ button {
   button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+  .secondary-container div:nth-child(2) {
+    margin-top: 2em;
   }
 }
 
@@ -146,11 +154,13 @@ button {
   .secondary-container div:first-child {
     display: flex;
     justify-content: center;
+    min-width: 350px;
   }
 
   .secondary-container div:nth-child(2) {
     display: flex;
     justify-content: center;
+    min-width: 350px;
   }
   .secondary-container {
     display: flex;
@@ -165,6 +175,7 @@ button {
   .data-table div {
     display: flex;
     justify-content: center;
+    min-width: 350px;
   }
   .secondary-container label {
     display: flex;
@@ -174,5 +185,27 @@ button {
   button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+
+  .data-table label {
+    font-size: 1rem;
+    margin-left: 1em;
+    min-width: 200px;
+  }
+
+  .secondary-container label {
+    margin-left: 2em;
+    font-size: 0.8rem;
+  }
+
+  .data-table h4 {
+    font-size: 0.9rem;
+  }
+
+  .secondary-container div:nth-child(2) {
+    margin-top: 2em;
   }
 }

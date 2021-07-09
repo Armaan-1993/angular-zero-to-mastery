@@ -22,19 +22,14 @@ export class TodoListComponent implements OnInit {
       this.list = data;
     });
 
-    this.userData = [
-      {
-        name: this.name,
-        age: this.age,
-      },
-    ];
     console.log(this.userData);
   }
   //   nameFunction = (e: any) => {
   //     this.name = e.target.value;
   //   };
 
-  addData = (e: any) => {
-    this.name = e.target.value;
+  addData = (name: any, age: any) => {
+    this.name = name.target.value;
+    this.age = age.target.value;
   };
 }
