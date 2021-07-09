@@ -3,3 +3,11 @@
 {{ result }}
 
 <!-- two way binidng -->
+
+<input type="text" #hello />
+{{ hello.value }}
+<!-- local refernce -->
+
+<button (click)="hey(hello.value)">Hello</button>
+
+<!-- <input (keyup)="toShowKeyUp($event)" type="text/> -->

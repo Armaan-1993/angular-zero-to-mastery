@@ -1,0 +1,178 @@
+.container {
+  background-color: rgb(105, 198, 221);
+  padding: 2em;
+  border-radius: 1em;
+}
+
+input {
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 1em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.secondary-container div:first-child {
+  width: 50%;
+  background-color: aqua;
+  min-width: 400px;
+  border-radius: 0.5em;
+}
+
+.secondary-container div:nth-child(2) {
+  background-color: rgb(135, 240, 135);
+  width: 50%;
+  min-width: 400px;
+  border-radius: 0.5em;
+}
+
+.secondary-container div:nth-child(2) input {
+  margin-left: 2em;
+}
+
+.secondary-container {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 2em;
+}
+
+.secondary-container label {
+  margin-left: 2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  padding: 2em;
+  margin-top: 2em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border: 2px solid black;
+  width: 50%;
+  display: flex;
+}
+
+.data-table {
+  display: flex;
+  /* border: 1px black solid; */
+  flex-flow: wrap;
+  border-radius: 1em;
+}
+
+.data-table div {
+  width: 50%;
+  border: 1px black solid;
+  display: flex;
+  justify-content: space-around;
+  min-width: 400px;
+  /* border: white; */
+  border-radius: 1em;
+  background-color: rgb(243, 235, 130);
+  padding: 1em;
+}
+
+.data-table label {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  margin-left: 1em;
+}
+
+button {
+  margin-top: 2em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  background-color: aqua;
+  padding: 1em 3em 1em 3em;
+  border-radius: 0.5em;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .secondary-container div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .secondary-container div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+  }
+  .secondary-container {
+    display: flex;
+    justify-content: center;
+  }
+  .data-table {
+    display: flex;
+    justify-content: center;
+  }
+
+  .data-table div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .secondary-container label {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .secondary-container div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .secondary-container div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+  }
+  .secondary-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .data-table {
+    display: flex;
+    justify-content: center;
+  }
+
+  .data-table div {
+    display: flex;
+    justify-content: center;
+  }
+  .secondary-container label {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+  }
+}

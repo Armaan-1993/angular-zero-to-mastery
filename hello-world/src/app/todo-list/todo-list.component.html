@@ -1,0 +1,28 @@
+<!-- <div class="container">
+  <p>{{ list | json }}</p>
+</div> -->
+<div class="container">
+  <div class="secondary-container">
+    <div>
+      <label>Enter your name</label>
+      <input type="text" [(ngModel)]="name" />
+    </div>
+    <div>
+      <label for="age">Enter your age</label>
+      <input type="number" [(ngModel)]="age" />
+    </div>
+  </div>
+
+  <h1>Table</h1>
+  <div class="data-table">
+    <div>
+      <label for="">Name:</label>
+      <h2>{{ name }}</h2>
+    </div>
+    <div>
+      <label for="">Age:</label>
+      <h2>{{ age }}</h2>
+    </div>
+  </div>
+  <button (keyup.enter)="addData($event)">Add Data</button>
+</div>
