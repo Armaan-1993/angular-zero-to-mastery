@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+
 import { ToDo } from '../model/todo.model';
 import { TodoServiceService } from '../todo-service.service';
 
@@ -11,9 +11,12 @@ import { TodoServiceService } from '../todo-service.service';
 export class TodoListComponent implements OnInit {
   list!: ToDo[];
   toDoApi!: string;
-  name!: string;
-  age!: number;
-  userData!: any[];
+  //   name!: string;
+  //   age!: number;
+  userData: any = [];
+  data: any = {};
+  name!: any;
+  age!: any;
   constructor(private getData: TodoServiceService) {}
 
   ngOnInit(): void {
@@ -28,8 +31,13 @@ export class TodoListComponent implements OnInit {
   //     this.name = e.target.value;
   //   };
 
-  addData = (name: any, age: any) => {
-    this.name = name.target.value;
-    this.age = age.target.value;
+  addData = () => {
+    this.userData.push(this.data);
+    this.data = {};
+  };
+
+  deleteData = (start: any) => {
+    console.log(start);
+    this.userData.splice(start, 1);
   };
 }

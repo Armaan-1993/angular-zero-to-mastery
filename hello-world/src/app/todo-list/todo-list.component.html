@@ -2,27 +2,33 @@
   <p>{{ list | json }}</p>
 </div> -->
 <div class="container">
-  <div class="secondary-container">
-    <div>
-      <label>Enter your name</label>
-      <input type="text" #name />
+  <form #form="ngForm">
+    <div class="secondary-container">
+      <div>
+        <label>Enter your name</label>
+        <input type="text" name="name" [(ngModel)]="data.name" required />
+      </div>
+      <div>
+        <label for="age">Enter your age</label>
+        <input type="text" name="age" [(ngModel)]="data.age" required />
+      </div>
     </div>
-    <div>
-      <label for="age">Enter your age</label>
-      <input type="number" #age />
-    </div>
-  </div>
+    <!-- <button [disabled]="f.invalid" (click)="addData()">Add Data</button> -->
+  </form>
 
   <h1>Table</h1>
-  <div class="data-table">
+  <div class="data-table" *ngFor="let mydata of userData; let i; as: index">
     <div>
       <label for="">Name:</label>
-      <h4>{{ name.value }}</h4>
+      <h4>{{ mydata.name }}</h4>
     </div>
     <div>
       <label for="">Age:</label>
-      <h4>{{ age.value }}</h4>
+      <h4>{{ mydata.age }}</h4>
     </div>
+    <button class="btn btn-sm btn-danger" (click)="deleteData(i)">
+      Delete Data
+    </button>
   </div>
-  <button (click)="addData(name.value, age.value)">Add Data</button>
+  <button [disabled]="form.invalid" (click)="addData()">Add Data</button>
 </div>

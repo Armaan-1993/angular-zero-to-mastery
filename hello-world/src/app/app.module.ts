@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ServiceCompComponent } from './service-comp/service-comp.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     BindingComponent,
     ServiceCompComponent,
     TodoListComponent,
+    FormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
