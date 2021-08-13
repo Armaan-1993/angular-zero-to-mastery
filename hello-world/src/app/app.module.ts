@@ -10,6 +10,9 @@ import { ServiceCompComponent } from './service-comp/service-comp.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { FormComponent } from './form/form.component';
     ServiceCompComponent,
     TodoListComponent,
     FormComponent,
+    ReactiveFormComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

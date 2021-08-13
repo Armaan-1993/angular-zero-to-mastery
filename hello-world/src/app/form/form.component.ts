@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   person!: any[];
+
+  formObj: any = {};
   constructor() {}
 
   ngOnInit(): void {
@@ -14,6 +17,7 @@ export class FormComponent implements OnInit {
       {
         name: 'Armaan',
         age: 27,
+        sex: 'other',
         country: 'India',
       },
       {
@@ -23,4 +27,8 @@ export class FormComponent implements OnInit {
       },
     ];
   }
+
+  submitForm = () => {
+    console.log(this.formObj);
+  };
 }

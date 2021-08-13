@@ -1,13 +1,25 @@
-<form action="">
+<form
+  autocomplete="off"
+  name="form"
+  #f="ngForm"
+  (ngSubmit)="f.form.valid && submitForm()"
+  novalidate
+>
   <div class="form-group">
     <label for="name">Name</label>
     <input
       type="text"
       name="name"
       class="form-control"
+      [(ngModel)]="formObj.name"
       placeholder="Name"
+      #name="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
       required
     />
+    <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+      <div *ngIf="name.errors?.required">This field is required</div>
+    </div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
@@ -15,9 +27,17 @@
       type="email"
       name="email"
       placeholder="e-mail"
+      [(ngModel)]="formObj.email"
       class="form-control"
+      [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+      #email="ngModel"
       required
+      email
     />
+    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+      <div *ngIf="email.errors?.required">This field is required</div>
+      <div *ngIf="email.errors?.email">Enter valid email</div>
+    </div>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
@@ -26,10 +46,12 @@
       name="password"
       placeholder="Password"
       class="form-control"
+      #password="ngModel"
+      [(ngModel)]="formObj.password"
       required
     />
   </div>
-  <button type="submit" class="btn w-50 btn-primary">Submit</button>
+  <button type="submit" class="btn w-50 btn-success">Submit</button>
 </form>
 
 <!-- ngclass and ngstyle -->

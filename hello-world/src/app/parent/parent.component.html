@@ -1,0 +1,32 @@
+<div class="mt-5">
+  <form
+    class="form-group w-25 m-auto"
+    style="
+      border: 5px solid rgb(34, 175, 88);
+      padding: 2em;
+      border-radius: 10px;
+    "
+  >
+    <div>
+      <h3>Parent Component</h3>
+    </div>
+    <div class="form-group">
+      <label for="name" class="mb-2">NAME</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        placeholder="Enter your Name"
+        [(ngModel)]="myName"
+      />
+    </div>
+    <div class="form-group mt-4">
+      <label for="email" class="mb-2">EMAIL</label>
+      <input type="email" class="form-control" placeholder="Enter your email" />
+    </div>
+  </form>
+</div>
+
+<app-child></app-child>
+
+{{ myName }}
